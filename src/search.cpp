@@ -1,3 +1,11 @@
+/*
+-------------------------------------------------------------------------------------------------------
+-- 寻址模块
+-- @author 苏铃峰
+-- @v1.1 2015/09/18
+-------------------------------------------------------------------------------------------------------
+*/
+
 #include "include.h"
 
 string temp_str;
@@ -11,6 +19,7 @@ int ipv6_min[8];
 int ipv6_max[8];
 int ipv6_input[8];
 
+//===================================初始化
 void clear_ch(){
 	for (int i = 0; i < 5; ++i)
 	{
@@ -19,6 +28,7 @@ void clear_ch(){
 	j=0;
 }
 
+//============================================ipv4地址查找
 int ipv4_change(string stemp){
 	string::size_type i=0;
 	int itemp=0;
@@ -43,6 +53,7 @@ int ipv4_change(string stemp){
 	return itemp;
 }
 
+//==============================================ipv6地址查找
 void ipv6_change(string stemp,int *x){
 	string::size_type i=0;
 	int itemp=0;

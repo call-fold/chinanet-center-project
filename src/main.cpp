@@ -1,3 +1,11 @@
+/*
+-------------------------------------------------------------------------------------------------------
+-- 主模块
+-- @author 苏铃峰
+-- @v1.1 2015/09/18
+-------------------------------------------------------------------------------------------------------
+*/
+
 #include "include.h"
 #include "time.h"
 
@@ -35,7 +43,7 @@ int main(int argc, char const *argv[])
 
 	else if(flag==2){
 		cout<<"ipv4"<<endl;
-		fstream outfile1("../dics/ipv4.dic",ios::out|ios::in);
+		fstream outfile1("../dics/ipv4.dic",ios::out|ios::in);  //输入ipv4字典库地址
 		while(outfile1>>temp_str){
 	 		svec1.push_back(temp_str);
 	 		outfile1>>temp_str;
@@ -48,7 +56,7 @@ int main(int argc, char const *argv[])
 
 	else if(flag==3){
 		cout<<"ipv6"<<endl;
-		fstream outfile2("../dics/ipv6.dic",ios::out|ios::in);
+		fstream outfile2("../dics/ipv6.dic",ios::out|ios::in);  //输入ipv6字典库地址
 		while(outfile2>>temp_str){
 	 		svec1.push_back(temp_str);
 	 		outfile2>>temp_str;
@@ -112,8 +120,8 @@ int main(int argc, char const *argv[])
  	finish = clock();
  	durationInsert = (double)(middle - start)/CLOCKS_PER_SEC;
  	durationSearch = (double)(finish - middle)/CLOCKS_PER_SEC;
- 	cout<<"insert time: "<<durationInsert<<endl;
- 	cout<<"search time: "<<durationSearch<<endl;
+ 	cout<<"insert time: "<<durationInsert<<endl;    //插入时间
+ 	cout<<"search time: "<<durationSearch<<endl;    //搜索时间
 
 	return 0;
 
