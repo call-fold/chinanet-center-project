@@ -1,0 +1,5 @@
+# Ignore large dic
+dics/ipv4_large.dic
+
+# Ignore files build by Mac
+.DS_Store
